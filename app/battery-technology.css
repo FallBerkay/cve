@@ -1,0 +1,184 @@
+.batteryTechnology {
+  position: relative;
+  height: 480vh;
+  overflow: visible;
+  background: #ffffff;
+}
+
+.batterySticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  height: 100svh;
+  overflow: visible;
+  background: #ffffff;
+}
+
+.batteryInner {
+  width: min(100% - 64px, 1280px);
+  height: 100%;
+  margin: 0 auto;
+  padding: clamp(24px, 3.5vh, 40px) 0;
+  display: grid;
+  grid-template-columns: minmax(340px, 0.82fr) minmax(520px, 1.18fr);
+  align-items: center;
+  gap: clamp(48px, 6vw, 88px);
+}
+
+.batteryCopy {
+  position: relative;
+  max-width: 520px;
+}
+
+.batteryCopy > p {
+  margin: 0 0 12px;
+  color: #087fb1;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+.batteryCopy h2 {
+  max-width: 520px;
+  margin: 0;
+  color: #0b1220;
+  font-size: clamp(44px, 4.8vw, 68px);
+  line-height: 0.98;
+  letter-spacing: 0;
+}
+
+.batteryCopy span {
+  display: block;
+  max-width: 500px;
+  margin-top: 28px;
+  color: #536070;
+  font-size: 18px;
+  line-height: 1.65;
+}
+
+.batteryFeatures {
+  margin-top: 38px;
+  border-top: 1px solid #d8dee7;
+}
+
+.batteryFeatures div {
+  display: flex;
+  align-items: center;
+  min-height: 62px;
+  border-bottom: 1px solid #d8dee7;
+}
+
+.batteryFeatures p {
+  margin: 0;
+  color: #0b1220;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.batteryStage {
+  position: relative;
+  width: 100%;
+  height: min(82svh, 760px);
+  min-height: 560px;
+  margin-top: 0;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.batterySequence {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  mix-blend-mode: multiply;
+}
+
+.batteryLoading {
+  position: absolute;
+  left: 50%;
+  bottom: 18px;
+  transform: translateX(-50%);
+  color: #667080;
+  font-size: 12px;
+  font-weight: 700;
+  opacity: 1;
+  transition: opacity 180ms ease;
+}
+
+.batteryStage.is-ready .batteryLoading {
+  opacity: 0;
+}
+
+@media (max-width: 1000px) {
+  .batteryInner {
+    grid-template-columns: minmax(280px, 0.8fr) minmax(420px, 1.2fr);
+    gap: 32px;
+  }
+
+  .batteryCopy h2 {
+    font-size: 44px;
+  }
+
+  .batteryCopy span {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 767px) {
+  .batteryTechnology {
+    height: 420vh;
+  }
+
+  .batteryInner {
+    width: calc(100% - 32px);
+    height: 100%;
+    padding: 28px 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 22px;
+  }
+
+  .batteryCopy h2 {
+    max-width: 350px;
+    font-size: 40px;
+  }
+
+  .batteryCopy span {
+    max-width: 350px;
+    margin-top: 14px;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .batteryFeatures {
+    display: none;
+  }
+
+  .batteryStage {
+    flex: 1;
+    height: auto;
+    min-height: 0;
+    margin-top: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .batteryTechnology {
+    height: auto;
+  }
+
+  .batterySticky {
+    position: relative;
+    height: auto;
+    min-height: 0;
+  }
+
+  .batteryInner {
+    height: auto;
+    min-height: 0;
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+}

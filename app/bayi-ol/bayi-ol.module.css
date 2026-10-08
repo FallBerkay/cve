@@ -1,0 +1,459 @@
+.page {
+  background: #ffffff;
+  color: #0a1426;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(300px, 0.72fr) minmax(560px, 1.28fr);
+  gap: 72px;
+  align-items: center;
+  width: min(100% - 96px, 1184px);
+  margin: 0 auto;
+  padding: 76px 0 88px;
+}
+
+.heroCopy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.heroCopy > p,
+.applicationIntro > p {
+  margin: 0 0 14px;
+  color: #0785ba;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.heroCopy h1 {
+  max-width: 470px;
+  margin: 0;
+  font-size: 68px;
+  line-height: 0.98;
+  letter-spacing: 0;
+}
+
+.heroCopy > span,
+.applicationIntro > span {
+  color: #5c6675;
+  font-size: 18px;
+  line-height: 1.65;
+}
+
+.heroCopy > span {
+  max-width: 430px;
+  margin-top: 24px;
+}
+
+.networkSummary {
+  width: 100%;
+  margin-top: 34px;
+  padding-top: 22px;
+  border-top: 1px solid #dfe4ea;
+}
+
+.networkSummary > strong {
+  display: block;
+  margin-bottom: 13px;
+  font-size: 13px;
+}
+
+.networkSummary > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+}
+
+.networkSummary span {
+  position: relative;
+  color: #5c6675;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.networkSummary span:not(:last-child)::after {
+  position: absolute;
+  top: 50%;
+  right: -11px;
+  width: 3px;
+  height: 3px;
+  content: "";
+  background: #08acee;
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+
+.heroCta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 158px;
+  min-height: 50px;
+  margin-top: 30px;
+  padding: 0 18px;
+  color: #ffffff;
+  background: #0a1426;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.heroCta span {
+  color: #08acee;
+  font-size: 18px;
+}
+
+.mapWrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 2 / 1;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.mapImage {
+  object-fit: contain;
+}
+
+.mapPoint {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  width: 12px;
+  height: 12px;
+  background: #08acee;
+  border: 3px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px #067cae, 0 3px 10px rgba(6, 124, 174, 0.22);
+  transform: translate(-50%, -50%);
+}
+
+.application {
+  display: grid;
+  grid-template-columns: minmax(320px, 0.72fr) minmax(540px, 1.28fr);
+  gap: clamp(56px, 8vw, 120px);
+  padding: 96px max(48px, calc((100vw - 1280px) / 2));
+  background: #f5f7f9;
+}
+
+.applicationIntro {
+  align-self: start;
+}
+
+.applicationIntro h2,
+.sectionHeading h2 {
+  margin: 0;
+  font-size: clamp(42px, 4.3vw, 64px);
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+.applicationIntro > span {
+  display: block;
+  margin-top: 28px;
+}
+
+.form {
+  display: grid;
+  gap: 28px;
+  padding: 40px;
+  background: #ffffff;
+  border: 1px solid #e1e6ec;
+}
+
+.applicationType {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.applicationType legend {
+  margin-bottom: 12px;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.applicationType label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 50px;
+  padding: 0 14px;
+  border: 1px solid #d8dee6;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.applicationType label:has(input:checked) {
+  color: #006f9e;
+  border-color: #08acee;
+  background: #f0faff;
+}
+
+.applicationType input {
+  margin: 0 9px 0 0;
+  accent-color: #08acee;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+}
+
+.formGrid label,
+.messageField {
+  display: grid;
+  gap: 8px;
+}
+
+.formGrid label > span,
+.messageField > span {
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.form input:not([type="radio"]):not([type="checkbox"]),
+.form select,
+.form textarea {
+  width: 100%;
+  min-height: 52px;
+  padding: 13px 14px;
+  color: #0a1426;
+  background: #ffffff;
+  border: 1px solid #cfd6df;
+  border-radius: 0;
+  font: inherit;
+  outline: none;
+}
+
+.form textarea {
+  resize: vertical;
+}
+
+.form input:focus,
+.form select:focus,
+.form textarea:focus {
+  border-color: #08acee;
+  box-shadow: 0 0 0 3px rgba(8, 172, 238, 0.12);
+}
+
+.consent {
+  display: grid;
+  grid-template-columns: 20px 1fr;
+  gap: 12px;
+  align-items: start;
+  color: #5c6675;
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.consent input {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  accent-color: #08acee;
+}
+
+.submitButton,
+.success button {
+  width: max-content;
+  min-height: 52px;
+  padding: 0 26px;
+  color: #ffffff;
+  background: #0a1426;
+  border: 0;
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.success {
+  display: flex;
+  min-height: 480px;
+  padding: 44px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  background: #ffffff;
+  border: 1px solid #e1e6ec;
+}
+
+.success svg {
+  width: 38px;
+  height: 38px;
+  color: #08acee;
+}
+
+.success h3 {
+  margin: 22px 0 8px;
+  font-size: 30px;
+}
+
+.success p {
+  max-width: 440px;
+  margin: 0 0 26px;
+  color: #5c6675;
+  line-height: 1.55;
+}
+
+.opportunities {
+  width: min(100% - 96px, 1280px);
+  margin: 0 auto;
+  padding: 96px 0 120px;
+}
+
+.sectionHeading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 36px;
+}
+
+.sectionHeading h2 {
+  max-width: 760px;
+}
+
+.sectionHeading p {
+  margin: 0;
+  color: #5c6675;
+}
+
+.opportunityList {
+  border-top: 1px solid #dfe4ea;
+}
+
+.opportunityList article {
+  display: grid;
+  grid-template-columns: minmax(280px, 1fr) 180px 180px 100px;
+  gap: 24px;
+  align-items: center;
+  min-height: 92px;
+  border-bottom: 1px solid #dfe4ea;
+}
+
+.opportunityList h3,
+.opportunityList p {
+  margin: 0;
+}
+
+.opportunityList h3 {
+  font-size: 22px;
+}
+
+.opportunityList p,
+.opportunityList span {
+  color: #5c6675;
+  font-size: 14px;
+}
+
+.opportunityList a {
+  color: #007cab;
+  font-size: 14px;
+  font-weight: 800;
+  text-align: right;
+}
+
+@media (max-width: 900px) {
+  .hero,
+  .application {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    gap: 48px;
+    width: min(100% - 48px, 720px);
+  }
+
+  .heroCopy h1 {
+    max-width: 620px;
+    font-size: 62px;
+  }
+
+  .application {
+    padding-right: 48px;
+    padding-left: 48px;
+  }
+}
+
+@media (max-width: 760px) {
+  .hero {
+    width: calc(100% - 32px);
+    padding: 48px 0 60px;
+  }
+
+  .heroCopy h1 {
+    font-size: 48px;
+  }
+
+  .heroCopy > span,
+  .applicationIntro > span {
+    font-size: 15px;
+    line-height: 1.55;
+  }
+
+  .mapWrap {
+    aspect-ratio: 16 / 10;
+  }
+
+  .mapPoint {
+    width: 10px;
+    height: 10px;
+    border-width: 2px;
+  }
+
+  .application {
+    gap: 36px;
+    padding: 64px 16px;
+  }
+
+  .applicationIntro h2,
+  .sectionHeading h2 {
+    font-size: 42px;
+  }
+
+  .form {
+    gap: 24px;
+    padding: 24px 18px;
+  }
+
+  .applicationType,
+  .formGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .opportunities {
+    width: calc(100% - 32px);
+    padding: 64px 0 80px;
+  }
+
+  .sectionHeading {
+    display: block;
+  }
+
+  .sectionHeading p {
+    margin-top: 14px;
+  }
+
+  .opportunityList article {
+    grid-template-columns: 1fr auto;
+    gap: 8px 16px;
+    padding: 22px 0;
+  }
+
+  .opportunityList h3 {
+    grid-column: 1 / -1;
+  }
+
+  .opportunityList a {
+    grid-column: 2;
+    grid-row: 2 / span 2;
+    align-self: center;
+  }
+}

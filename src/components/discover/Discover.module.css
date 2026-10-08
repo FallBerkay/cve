@@ -1,0 +1,33 @@
+.section { width: min(100% - 96px, 1184px); margin: auto; padding: 64px 0; scroll-margin-top: 100px; }
+.heading { margin: 0 0 28px; font-size: 44px; line-height: 1.1; font-weight: 700; color: #111820; }
+.grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+.hero { grid-column: 1 / -1; overflow: hidden; border: 1px solid #08acee; border-radius: 4px; }
+.panels { display: flex; aspect-ratio: 37 / 10; overflow: hidden; }
+.panel { position: relative; flex: 1; min-width: 0; overflow: hidden; background: #edf0f2; }
+.panel + .panel { margin-left: -4%; }
+.panel img { object-fit: cover; transition: transform 250ms ease; }
+.panel:hover img { transform: scale(1.025); }
+.heroFooter { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 22px 26px; background: #fff; border-top: 1px solid #08acee; }
+.heroFooter h3 { margin: 0; font-size: 26px; line-height: 1.25; font-weight: 700; }
+.action { display: inline-flex; align-items: center; gap: 12px; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.action svg { width: 20px; height: 20px; color: #008fc8; flex-shrink: 0; }
+.card { display: flex; flex-direction: column; min-width: 0; overflow: hidden; border: 1px solid #dfe4e8; border-radius: 4px; background: #fff; transition: border-color 180ms ease; }
+.card:hover { border-color: #08acee; }
+.media { position: relative; aspect-ratio: 5 / 3; background: #f3f5f6; border-bottom: 1px solid #e6eaed; }
+.media img { object-fit: contain; }
+.cardFooter { display: flex; align-items: flex-start; justify-content: space-between; gap: 18px; min-height: 112px; padding: 22px; }
+.cardFooter h3 { margin: 0 0 13px; font-size: 20px; font-weight: 600; line-height: 1.35; }
+.cardFooter > svg { width: 20px; height: 20px; margin-top: 3px; color: #008fc8; flex-shrink: 0; }
+.cardFooter span { color: #626a75; font-size: 13px; }
+.section a:focus-visible { outline: 2px solid #008fc8; outline-offset: -4px; }
+@media (max-width: 760px) {
+  .section { width: calc(100% - 32px); padding: 44px 0; }
+  .heading { font-size: 32px; margin-bottom: 22px; }
+  .grid { grid-template-columns: 1fr; gap: 20px; }
+  .panels { aspect-ratio: 2 / 1; }
+  .heroFooter { padding: 18px 16px; gap: 16px; flex-wrap: wrap; }
+  .heroFooter h3 { font-size: 22px; }
+  .action { font-size: 13px; }
+  .cardFooter { min-height: 0; padding: 20px; }
+}
+@media (prefers-reduced-motion: reduce) { .panel img, .card { transition: none; } }

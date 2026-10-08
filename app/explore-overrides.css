@@ -1,0 +1,56 @@
+.imageCard.wide {
+  height: 320px;
+  min-height: 0;
+}
+
+.imageCard:not(.wide) {
+  height: 230px;
+  min-height: 0;
+}
+
+.imageCard img {
+  height: 100%;
+  min-height: 0;
+  animation: exploreImageMotion 12s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+.imageCard:nth-child(2) img {
+  animation-delay: -3s;
+}
+
+.imageCard:nth-child(3) img {
+  animation-delay: -6s;
+}
+
+.imageCard:nth-child(4) img {
+  animation-delay: -9s;
+}
+
+.imageCard:hover img {
+  animation-play-state: paused;
+  transform: scale(1.05);
+}
+
+@keyframes exploreImageMotion {
+  0% {
+    transform: scale(1.01) translate3d(-0.4%, 0, 0);
+  }
+  100% {
+    transform: scale(1.07) translate3d(0.8%, -0.5%, 0);
+  }
+}
+
+@media (max-width: 760px) {
+  .imageCard.wide,
+  .imageCard:not(.wide) {
+    height: 210px;
+    min-height: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .imageCard img {
+    animation: none;
+  }
+}
